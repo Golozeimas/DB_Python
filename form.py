@@ -13,7 +13,7 @@ with st.form("Formulario de filmes:"):
 
     if st.form_submit_button("Adicionar na tabela de filmes"):
         dados.inseri_dados(nome, ano_do_filme, nota_do_filme)
-        st.write("Filme adicionado com sucesso!")
+        st.success("Filme adicionado com sucesso!")
 
 
 if st.checkbox("Quero alterar filmes da tabela, CLIQUE AQUI"):
@@ -27,6 +27,7 @@ if st.checkbox("Quero alterar filmes da tabela, CLIQUE AQUI"):
 
     if st.button("Atualizar dados"):
         dados.update_dados(option, nome, ano_do_filme, nota_do_filme)
+        st.warning("Dados atualizados com sucesso")
 
 dados_dos_filmes = dados.ler_dados()
 
@@ -46,4 +47,4 @@ option = st.number_input("Digite o número de id para deletar um filme:",format=
 
 if st.button("Deletar"):
     dados.deletar_dados(option)
-    st.write("Filme apagado com sucesso!")
+    st.error("Filme apagado com sucesso!")
