@@ -8,4 +8,8 @@ cursor = conexao.cursor()
 tabela_filmes = cursor.execute("SELECT * FROM filmes")
 
 # fetchall -> retorna a consulta do select no caso como tabela completa aqui
-print(tabela_filmes.fetchall())
+dados_de_filmes = tabela_filmes.fetchall()
+
+for dados in dados_de_filmes:
+    id, nome, ano, nota = dados
+    print(f"Esse é o nome do filme: {nome}")
