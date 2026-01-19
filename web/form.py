@@ -1,5 +1,5 @@
 import streamlit as st
-import dados
+import web.dados as dados
 
 with st.form("Formulario de filmes:"):
     st.title("Filmes")
