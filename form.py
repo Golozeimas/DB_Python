@@ -1,5 +1,4 @@
 import streamlit as st
-import random as rd
 import dados
 
 with st.form("Formulario de filmes:"):
