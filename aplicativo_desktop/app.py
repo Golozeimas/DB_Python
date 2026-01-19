@@ -1,5 +1,5 @@
 import tkinter as tk
-import app.orm as orm
+import orm
 from tkinter import messagebox
 
 # Raiz do projeto de uma aplicação desktop
@@ -62,5 +62,31 @@ def adicionar_filme():
     ano = entry_ano.get()
     nota = entry_nota.get()
     orm.adiciona_filme(nome, ano, nota)
+    messagebox.showinfo("Sucesso ao adicionar", f"Você adicionou o filme: {nome}")
+
+def deletar_filme():
+    id = entry_id.get()
+    orm.deletar_dados(id)
+    messagebox.showinfo("Sucesso ao apagar", "Você apagou o filme")
+
+def atualizar_dados():
+    id = entry_id.get()
+    nome = entry_nome.get()
+    ano = entry_ano.get()
+    nota = entry_nota.get()
+    orm.atualizar_dados(id, nome, ano, nota)
+    messagebox.showinfo("Sucesso ao atualizar", f"Você atualizou o filme: {id}")
+
+button_adicionar = tk. Button(root,text="adicionar filme", command=adicionar_filme, width=30)
+
+button_adicionar.grid(row=4, column=1, pady=10)
+
+button_adicionar = tk. Button(root,text="atualizar filme", command=atualizar_dados, width=30)
+
+button_adicionar.grid(row=5, column=1, pady=10)
+
+button_adicionar = tk. Button(root,text="deletar filme", command=deletar_filme, width=30)
+
+button_adicionar.grid(row=6, column=1,pady=10)
 
 tk.mainloop()
