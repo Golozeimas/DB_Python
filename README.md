@@ -1,5 +1,4 @@
-# 🎬 Sistema de Gerenciamento de Filmes/Jogos
-
+# Estudos sobre vários DB no python
 Repositório com exemplos práticos de operações CRUD (Create, Read, Update, Delete) utilizando diferentes tecnologias de banco de dados e interfaces.
 
 ## 📋 Tecnologias
